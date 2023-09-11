@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>shoping list</h1>
+        <input id="item" type="text" ><br><br>
+        <input id="qty" type="text" ><br><br>
+        <input id="price" type="text" ><br><br>
+        <button onclick="addtolist()">submit</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>s/n</th>
+                    <th>item</th>
+                    <th>quantity</th>
+                    <th>price</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody id="disp">
+
+            </tbody>
+        </table>
+    </main>
+</body >
+    <script>
+        let list = [ ]
+        let qty = document.getElementById("qty");
+        let item = document.getElementById("item");
+        let price = document.getElementById("price");
+        function addtolist(){
+            let data ={
+            item: item.value,
+            qty: qty.value,
+            price: price.value
+        }
+        list.push(data)
+        console.log(list);
+
+        disp.innerHTML = " "
+        for (let index = 0; index < list.length; index++) {
+            const element = list[index];
+            disp.innerHTML += `
+            <tr>
+                <td>${index}</td>
+                <td>${element.item}</td>
+                <td>${element.qty}</td>
+                <td>${element.price}</td>
+                <td>
+                   <button>edit</button> 
+                   <button>del</button> 
+                </td>
+
+            </tr>`
+        }
+        }
+    
+    </script>
+</html>

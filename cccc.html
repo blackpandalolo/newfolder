@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="panda()">PANDA</button>
+    <div id="dd1"></div>
+    <div id="dd2"></div>
+    <div id="dd3"></div>
+    <div id="dd4"></div>
+    <div id="dd5"></div>
+    <div id="dd6"></div>
+</body>
+    <script>
+       let dd1 = document.getElementById("dd1") 
+       let dd2 = document.getElementById("dd2") 
+       let dd3 = document.getElementById("dd3") 
+       let dd4 = document.getElementById("dd4") 
+       let dd5 = document.getElementById("dd5") 
+       let dd6 = document.getElementById("dd6") 
+
+       function panda() {
+        let sent = prompt("press");
+        dd1.innerHTML = `the string you enter is ${sent}`
+        const lenght = sent.lenght
+        let a = `the lenght of the string is ${lenght}`
+        dd2.innerHTML = a 
+        const be = sent.toLowerCase()
+        dd3.innerHTML = be
+        const u = sent.toUpperCase()
+        dd4.innerHTML = u 
+        if(sen.toLowerCase().includes("javascript")) {
+            dd5.innerHTML = ` the string you entered contain "javascript"`
+        }else{
+            dd5.innerHTML = `the string you entered does not contain "javascript"`
+        }
+        let index = sent.indexof('a')
+        dd6.innerHTML = `the index of 'a' inthe string is  ${index}`;
+
+       }
+    </script>
+</html>

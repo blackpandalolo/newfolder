@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mmm.css">
+    <link rel="stylesheet" href="mmm.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+   <div style="width: 50%; margin: auto;">
+    <h1 class="fw-bold text-center display-4">Shopping list</h1>
+    <label for="" class="fw-bold">Name of items</label> <br>
+    <input type="text" id="noi" class="form-control"> <br><br>
+    <label for="" class="fw-bold">Number of quantity</label><br>
+    <input type="text" id="noq" class="form-control"><br><br>
+    <label for="" class="fw-bold">Price per quantity</label> <br>
+    <input type="text" id="ppq" class="form-control"> <br><br>
+
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <button onclick="add()" class="btn btn-success">Add</button>
+        </div>
+        <div>
+            <span class="fw-bold">Total:</span><span id="Total"></span>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center"></div>
+
+        <table class="table table-hover align-middle text-center" id="display"></table>
+    </div>
+
+   </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #img{
+            width: 200px;
+            
+        }
+    </style>
+<body>
+    <button onclick="next()">prev</button>
+    <img src="2013_mclaren_mp4_12c_hpe700_by_hennessey-HD.jpg" alt=""  id="img">
+    <img src="dodge-challenger-2010-47.jpg" alt=""  id="img">
+    <img src="fa6fd5014ccbd8f4392f716473ab6ff354f871505d9128820bbb0461cce1d645.jpg" alt="" id="img">
+    <img src="thumb-1920-1014969.jpg" alt=""  id="img">
+    <button onclick="prev()">next</button>
+</body>
+    <script>
+        let i = 0
+        let img = document.getElementById("img");
+        let array = ["1.jpg", "2.jpg", "3.jpg", "4.pjg"];
+        console.log(img);
+        img.src = array[i];
+        function next(){
+            if (i == 4){
+                i = 0;
+            }
+            i++;
+            img.src = array[i];
+        }
+        function prev(){
+            if (i == 0){
+                i = 4;
+            }
+            i--;
+            img.src = array[i]
+        }
+    </script>
+</html>

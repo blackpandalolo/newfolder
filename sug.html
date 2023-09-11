@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>suggest a number</h1>
+
+    <input id="num" type="number" ><button type="button" onclick="disp()">check</button>
+    <button onclick="interClear()">clear</button>
+    <br>
+    <br>
+    <input id="numm" type="num"> <button onclick="disp()">timeup</button>
+</body>
+    <script>
+        let num = document.getElementById("num");
+        let check = document.getElementById("check");
+        let random = Math.floor(Math.random()*10 + 4)
+
+        function disp(){
+            if (num.value ==  random ){
+                alert("the number is correct")
+            }else if(num.value !== ""){
+                alert("the number is not correct")
+            }
+            
+        }
+        console.log(random)
+
+        setTimeout(()=>{
+            alert("you are delayed")
+        },6000)
+
+        // let thelog = setInterval(()=>{
+        //     console.log("something");
+        //     console.log("line2")
+        // }, 3000)
+
+        // function interClear(){
+        //     clearInterval(thelog)
+        // }
+
+        let numm = document.getElementById("numm");
+        let timeup = document.getElementById("timeup");
+
+    </script>
+</html>

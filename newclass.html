@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+        width: 200px;
+        height: 400px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <button onclick="greeting()">click me</button>
+    <p id="p1"></p>
+    <div id="div1"></div>
+</body>
+    <script>
+        let p1= document.getElementById("p1");
+        let div1= document .getElementById("div1");
+        function greeting() {
+            let color= prompt("enter your color: ");
+            div1.innerHTML = `the background color of this div is ${color}`;
+            div1.style.backgroundColor = color;
+        }
+
+
+         //operators in javascript
+    //Arithmetic operators
+    //Addition operators
+    console.log(30 + 15);
+
+//Subtraction operators
+console.log(30 - 15);
+
+//Mutiplication operators
+console.log(30 * 15);
+
+//Division operators
+console.log(30 / 15);
+
+//modulus operators
+// return the remainder of a division operation
+console.log(30 % 20);
+
+// exponentiation operators
+//Returns the result of raising the first operand to the power of the second operand
+console.log(5 ** 7);
+
+//increment operators
+//increase the value of its operand by 1
+let x = 10
+x++;
+console.log(x);
+
+//decrement operators
+//decreases the value of its opreand by 1
+let y = 10
+y--;
+console.lo(y);
+
+//Assignment operators
+let a = 5;
+let b = 10;
+console.log(b);
+
+//Addition assignment
+b += a; //We are assigning the value of b + a to b
+consol.log(b);
+
+//Substraction assignment
+b -= a; // We are assigning the value of b - a to b
+console.log(b);
+
+//Multiplication assignment
+let c =5;
+let d = 15;
+c *= d; //We are assigning the value of c * d to c 
+console.log(c)
+
+//Division assignment
+c /= d; //We are assigning the value of c / d to c 
+console.log(c);
+
+//Modulus assignment
+c %= d; //We are assigning the value of c % d to c
+console.log(c);
+
+//Exponentiation assignment
+let e =5;
+let f =2;
+e **= f; //We are assigning the value of e ** f to e
+console.log(e);
+
+//Comparison operators
+let g = 10;
+let h = 20;
+console.log(g == h); // Returns true if the operands are equal
+
+let test = "33";
+let test2 = 33;
+console.log(test == test2); // Returns true if the operands are equal. it compares only the value
+
+console.log(test === test2); // Returns true if the operands are equal and of the same type. it compares the value and the data type
+
+
+    
+
+</script>
+</html>

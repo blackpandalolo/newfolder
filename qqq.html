@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <form>
+        <input id="username" type="text" placeholder="username"> <br><br>
+        <input id="email" type="text" placeholder="email address"> <br><br>
+        <input id="password" type="password" placeholder="password"> <button type="button" onclick="showpass">s</button> <br><br>
+        <input id="confirmed" type="password" placeholder="confirm password"> <button type="button" onclick="showpass">s</button> <br><br>
+        <button type="button" onclick="register()">submit</button> <br><br>
+    </form>
+
+    <form>
+        <label for="as">username</label><br>
+        <input id="as" type="text" placeholder="username"> <br><br>
+        <label for="v"></label> <br>
+        <input id="v" type="text" placeholder="password"> <br><br>
+        <button type="button" onclick="vee()">submit</button>
+    </form>
+</body>
+    <script>
+        let username = document.getElementById("username");
+        let email = document.getElementById("emailaddress");
+        let password = document.getElementById("password");
+        let confirmed = document.getElementById("confirmed");
+
+        function showpass(){
+    password.type == "password"? password.type = "text" : password.type = "password"
+}
+        function showpass(){
+    password.type == "confirmed"? password.type = "text" : password.type = "password"
+}
+
+      function register(){
+        if(username.value == "" || email.value =="" || password.value == ""){
+            alert("field cannot be empty")
+        }else if(password.value !== confirmed.value){
+            alert("password does not match")
+        }else if(password.value.lenght < 8){
+            alert("password must be less than 8")
+        }else{
+            alert("successful")
+        }
+      }  
+
+
+        let free = [
+            {username: " panda", password: "thuglife"},
+            {username: " benson", password: "thuglife1"},
+            {username: " lord", password: "thuglife2"},
+            {username: " janza", password: "thuglife3"},
+            {username: " mufasa", password: "thuglife4"}
+        ]
+
+        let cool = JSON.stringify(free);
+        localStorage.setitem("free", cat);
+        console.log(cat)
+       
+
+      function vee(){
+        let getuser = JSON.parse(localStorage.getItem('free'));
+        let as = document.getElementById("as").value;
+        let v = document.getElementById('v').value;
+
+         let foundyser = getuser.find(user=> user.username === as);
+         let mpass = getuser.find(user=> user.password === v);
+         if(founduser && mpass){
+            alert('suc')
+         }else{
+            alert('failed')
+         }
+      }    
+        
+
+    
+
+    </script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .we{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 7px;
+            margin-top: 30px;
+        }
+    </style>
+<body>
+    <form class="we" id="we">
+        <input type="text" placeholder="username" id="input1"><br><br>
+        <input type="password" placeholder="password" id="input2"> <br> <br>
+        <input type="password" placeholder="confirm password" id="input3"> <br> <br>
+        <button onclick="display()">submit</button>
+    </form>
+</body>
+    <script>
+        let input1 = document.getElementById("input1")
+        let input2 = document.getElementById("input2")
+        let input3 = document.getElementById("input3")   
+
+        function display() {
+            let data = "the password does not match"
+            disp.innerHTML =""
+            list.forEach((el,i)=>{
+                disp.innerHTML += `
+                if (password == confirm pass){
+                    accept it
+                }else{
+                    alert ('password does not match')
+                }`
+            })
+        } 
+       
+        
+     
+    </script>
+</html>

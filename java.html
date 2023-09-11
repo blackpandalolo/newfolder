@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        width: 200px;
+        height: 200px;
+        border-radius: 7px;
+        border: 1px solid lightgray;
+        box-shadow:8px 6px 8px rgba(0, 0, 0, 0.5);
+
+
+        
+    }
+</style>
+<body>
+    <div class="card"></div>
+    <button onclick="display('')">card</button>
+</body>
+<script>
+    card = document.querySelector(".card")
+    card.style.display = "none";
+    
+    function display(){
+        if(card.style.display == "none"){
+            card.style.display = "block";
+        }else{
+            card.style.display = "none";
+        }
+
+    }
+    //assignment changing botton for the body should be dark and text to be light 
+    // create a sign up form  username email password confirm pasword and submit  register button';
+    // password does not match
+    // having an array of images slider
+</script>
+</html>
